@@ -1,0 +1,25 @@
+<p>Mise à jour d'un article</p> 
+<form (ngSubmit)="updateArticle()">
+    
+      <div class="form-group">
+        <label for="ArticleProvider">Select provider </label>
+        <select   [(ngModel)]="providerId" name="providerId"  class="form-control">
+            <option></option>
+          <option *ngFor="let provider of providers"  [value]="provider.id">{{provider.name}}</option>
+          </select>
+      </div>
+    <div class="form-group"> 
+        <label for="articleLabel">Label </label> 
+        <input [(ngModel)] = "label" name="articleLabel" size="20" type="text" class="form-control" id="articleLabel" /> 
+    </div> 
+    <div class="form-group"> 
+        <label for="articlePrice">Price </label> 
+        <input [(ngModel)] = "price" name="articlePrice" size="20" type="text" class="form-control" id="articlePrice" /> 
+    </div>
+    <div class="form-group"> 
+        <label for="articlePicture">picture </label> 
+        <input [(ngModel)] = "picture" name="articlePicture" size="20" type="text" class="form-control" id="articlePicture" /> 
+    </div>
+    <input [(ngModel)]="id" name="articleId" type="hidden"/> 
+    <button class="btn btn-primary">Mise à jour</button>
+</form>

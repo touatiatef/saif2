@@ -1,0 +1,18 @@
+<div>
+    <h2>Liste de chaînes :</h2>
+    <ul>
+      <!-- Utiliser *ngFor pour itérer sur le tableau de chaînes -->
+      <li *ngFor="let chaine of tableauDeStrings">{{ chaine|firstLetterUpperCase }}</li>
+    </ul>
+    <table boder="1" class="table" align="center">
+      <tr><th>ID</th><th>Name</th><th>Username</th><th>Email</th><th>Adresse</th></tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.street}}</td>
+      </tr>
+    </table>
+
+  </div>
