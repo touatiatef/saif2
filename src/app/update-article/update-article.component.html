@@ -16,9 +16,20 @@
         <label for="articlePrice">Price </label> 
         <input [(ngModel)] = "price" name="articlePrice" size="20" type="text" class="form-control" id="articlePrice" /> 
     </div>
-    <div class="form-group"> 
+    <!-- <div class="form-group"> 
         <label for="articlePicture">picture </label> 
         <input [(ngModel)] = "picture" name="articlePicture" size="20" type="text" class="form-control" id="articlePicture" /> 
+    </div> -->
+    Image face : <img src="{{urlUpload}}/{{nomOldImageFace}}" width="20%"/>
+    <div class="form-group">
+      <label for="providerAdress">New Provider picture </label>
+      <input [(ngModel)]="nomNewImageFace" name="nomNewImageFace" class="form-control" placeholder="Image" type="file" (change)="onFileFaceChanged($event)">
+    </div>
+
+    Image profile : <img src="{{urlUpload}}/{{nomOldImageProfile}}" width="20%"/>
+    <div class="form-group">
+      <label for="providerAdress">New Provider picture </label>
+      <input [(ngModel)]="nomNewImageProfile" name="nomNewImageProfile" class="form-control" placeholder="Image" type="file" (change)="onFileProfileChanged($event)">
     </div>
     <input [(ngModel)]="id" name="articleId" type="hidden"/> 
     <button class="btn btn-primary">Mise à jour</button>

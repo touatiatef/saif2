@@ -14,7 +14,8 @@ import { environment } from '../../environments/environment.development';
 export class ListProviderComponent {
   //public urlUpload = environment.urlUploadImage;
 
-public urlUpload= 'http://127.0.0.1:8080/uploads' ;
+//public urlUpload= 'http://127.0.0.1:8080/uploads' ;
+public urlUpload = environment.urlUploadImage;
   providers: any;
   constructor(private service: ProviderService, private router :Router) {
     console.log("constructeur injecte Service HttpClient")

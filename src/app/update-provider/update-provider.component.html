@@ -1,5 +1,5 @@
 <p>Mise à jour d'un provider</p> 
-<form (ngSubmit)="updateProvider()">
+<form (ngSubmit)="updateProvider()" enctype="multipart/form-data">
      <div class="form-group"> 
         <label for="providerName">Provider Name </label> 
         <input [(ngModel)] = "name" name="providerName" size="20" type="text" class="form-control" id="providerName" /> 
@@ -12,6 +12,12 @@
         <label for="providerAdress">Provider Adresse </label>
          <input [(ngModel)] = "adress" name="providerAdress" size="20" type="text" class="form-control" id="providerAdress" /> 
         </div> 
+
+        Provider picture : <img src="{{urlUpload}}/{{nomOldImage}}" width="20%"/>
+  <div class="form-group">
+    <label for="nomNewImage">New Provider picture </label>
+    <input [(ngModel)]="nomNewImage" name="nomNewImage" class="form-control" placeholder="Image" type="file" (change)="onFileChanged($event)">
+  </div>
         <input [(ngModel)]="id" name="providerId" type="hidden"/> 
         <button class="btn btn-primary">Mise à jour</button>
         </form>

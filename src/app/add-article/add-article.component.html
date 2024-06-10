@@ -14,9 +14,19 @@
     <label for="articlePrice">article price </label> 
     <input ngModel name="articlePrice" size="20" type="text" class="form-control" id="articlePrice" /> 
    </div> 
-   <div class="form-group"> 
+   <!-- <div class="form-group"> 
        <label for="articlePicture">article picture </label>
         <input ngModel name="articlePicture" size="20" type="text" class="form-control" id="articlePicture" />
-        </div> 
+        </div>  -->
+
+        
+  <div class="form-group">
+    <label for="imageFace">Image face </label>
+    <input ngModel name="imageFace" class="form-control" placeholder="Image" type="file" (change)="onFileFaceChanged($event)" multiple>
+  </div>
+  <!-- <div class="form-group">
+    <label for="imageProfile">Image profile </label>
+    <input ngModel name="imageProfile" class="form-control" placeholder="Image" type="file" (change)="onFileProfileChanged($event)">
+  </div> -->
         <button class="btn btn-primary">Ajouter</button>
         </form>
